@@ -1,0 +1,38 @@
+Bundle 'matze/vim-move'
+Bundle "wookiehangover/jshint.vim"
+
+au BufRead,BufNewFile *.hamlc set ft=haml
+noremap <F4> :confirm bd<CR>
+let g:move_key_modifier = 'C'
+autocmd! GUIEnter * set vb t_vb=
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+autocmd BufWritePre * :%s/\s\+$//e
+map <C-N> :CtrlP
+let g:neosnippet#disable_runtime_snippets = { "_": 1, }
+
+UnBundle 'myusuf3/numbers.vim'
+UnBundle 'gorodinskiy/vim-coloresque'
+
+UnBundle 'osyo-manga/vim-over'
+UnBundle 'kana/vim-textobj-user'
+UnBundle 'kana/vim-textobj-indent'
+UnBundle 'gcmt/wildfire.vim'
+UnBundle 'reedes/vim-litecorrect'
+UnBundle 'reedes/vim-textobj-sentence'
+UnBundle 'reedes/vim-textobj-quote'
+UnBundle 'reedes/vim-wordy'
+UnBundle 'mattn/webapi-vim'
+UnBundle 'mattn/gist-vim'
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+set background=light
+set clipboard=unnamed
+set re=1
+let g:ruby_path="/opt/boxen/rbenv/shims/ruby"
